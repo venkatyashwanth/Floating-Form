@@ -1,0 +1,30 @@
+$icon-height: 3.3rem;
+$icon-width: 3.3rem;
+
+.icon--email {
+    &::before {
+        content: '';
+        display: inline-block;
+        height: $icon-height;
+        width: $icon-width;
+        background-color: var(--color-primary);
+        -webkit-mask-image: url("../icons/SVG/mail-envelope-open.svg");
+        mask-image: url("../icons/SVG/mail-envelope-open.svg");
+        -webkit-mask-size: cover;
+        mask-size: cover;
+    }
+}
+
+.icon--key {
+    &::before {
+        content: '';
+        display: inline-block;
+        height: $icon-height;
+        width: $icon-width;
+        background-color: var(--color-primary);
+        -webkit-mask-image: url("../icons/SVG/key.svg");
+        mask-image: url("../icons/SVG/key.svg");
+        -webkit-mask-size: cover;
+        mask-size: cover;
+    }
+}

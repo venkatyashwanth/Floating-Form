@@ -1,0 +1,82 @@
+@import "./vendors/_vendor-dir";
+@import "./base/_base-dir";
+@import "./components/_component-dir";
+
+.form--container {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 4rem 2rem;
+
+  .form-label {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 2.2rem;
+    line-height: 2.2rem;
+    transition: all .2s;
+  }
+
+  .form-input {
+    color: #fff;
+    font-size: 2.4rem;
+    padding-left: 5.8rem;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding-bottom: 0;
+    &:focus {
+      border-bottom: 1px solid #ffbc39;
+      outline: none;
+    }
+    &::placeholder{
+      opacity: 0;
+    }
+  }
+
+  .error-text{
+    display: block;
+    color: red;
+    font-size: 1.8rem;
+    padding: 1rem 0; 
+  }
+
+
+  .float-box {
+    position: relative;
+
+    .form-font {
+      position: absolute;
+      top: 20%;
+      transform: translateY(-50%);
+    }
+    .form-label{
+      position: absolute;
+      top:0%;
+      left: 5.8rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6rem;
+    }
+  }
+
+
+
+  .float-box>.form-input:focus~label {
+    color: rgba(255, 255, 255, 0.3);
+    transform: scale(1) translateY(-3rem) translateX(0rem);
+  }
+
+  .float-box>.form-input:not(:placeholder-shown) ~ label{
+    color: rgba(255, 255, 255, 0.3);
+    transform: scale(1) translateY(-3rem) translateX(0);
+  }
+
+  .float-box>.form-input{
+    padding-bottom: 2rem;
+  }
+
+  .float-box>.form-input:not(:placeholder-shown){
+    padding-bottom: 2rem;
+  }
+
+}
